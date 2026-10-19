@@ -11,7 +11,7 @@ plugins {
 }
 
 android {
-    namespace = "com.follow.clash.core"
+    namespace = "com.cloudnote.sync.helper.core"
     compileSdk = libs.versions.compileSdk.get().toInt()
     ndkVersion = libs.versions.ndkVersion.get()
 
@@ -61,7 +61,7 @@ val goExecutablePath =
 val goModule = rootProject.layout.projectDirectory.dir("../core")
 
 // gomobile names the library gojni, both as the file it builds and in go.Seq's System.loadLibrary, and has no option to change it.
-val coreLibraryName = "clash"
+val coreLibraryName = "netsync"
 
 val buildConfig =
     providers.fileContents(rootProject.layout.projectDirectory.file("../build_config.yaml")).asText.map { text ->
@@ -150,7 +150,7 @@ abstract class GomobileBind : DefaultTask() {
                 "bind",
                 "-target=${targets.get().joinToString(",")}",
                 "-androidapi=${androidApi.get()}",
-                "-javapkg=com.follow.clash.core",
+                "-javapkg=com.cloudnote.sync.helper.core",
                 "-tags=${tags.get()}",
                 "-ldflags=${ldflags.get()} -X=runtime.godebugDefault=${godebug.toString().trim()}",
                 "-o",

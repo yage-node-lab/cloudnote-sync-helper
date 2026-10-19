@@ -218,8 +218,8 @@ _VpnProps _$VpnPropsFromJson(Map<String, dynamic> json) => _VpnProps(
   enable: json['enable'] as bool? ?? true,
   systemProxy: json['systemProxy'] as bool? ?? true,
   ipv6: json['ipv6'] as bool? ?? false,
-  allowBypass: json['allowBypass'] as bool? ?? true,
-  dnsHijacking: json['dnsHijacking'] as bool? ?? false,
+  allowBypass: json['allowBypass'] as bool? ?? false,
+  dnsHijacking: json['dnsHijacking'] as bool? ?? true,
   accessControlProps: json['accessControlProps'] == null
       ? defaultAccessControlProps
       : AccessControlProps.fromJson(

@@ -1,0 +1,24 @@
+package com.cloudnote.sync.helper
+
+import com.cloudnote.sync.helper.plugins.AppPlugin
+import com.cloudnote.sync.helper.plugins.BatteryPlugin
+import com.cloudnote.sync.helper.plugins.ServicePlugin
+import com.cloudnote.sync.helper.plugins.TilePlugin
+import io.flutter.embedding.android.FlutterActivity
+import io.flutter.embedding.engine.FlutterEngine
+
+class MainActivity : FlutterActivity() {
+    override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
+        super.configureFlutterEngine(flutterEngine)
+        flutterEngine.plugins.add(AppPlugin())
+        flutterEngine.plugins.add(BatteryPlugin())
+        flutterEngine.plugins.add(ServicePlugin())
+        flutterEngine.plugins.add(TilePlugin())
+        ServiceState.attachFlutterEngine(flutterEngine)
+    }
+
+    override fun onDestroy() {
+        flutterEngine?.let(ServiceState::detachFlutterEngine)
+        super.onDestroy()
+    }
+}

@@ -1,6 +1,6 @@
-package com.follow.clash.service.models
+package com.cloudnote.sync.helper.service.models
 
-import com.follow.clash.common.AccessControlMode
+import com.cloudnote.sync.helper.common.AccessControlMode
 import com.google.gson.JsonParser
 import java.net.Inet4Address
 import java.net.Inet6Address

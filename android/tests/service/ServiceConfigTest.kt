@@ -1,9 +1,9 @@
-package com.follow.clash.service
+package com.cloudnote.sync.helper.service
 
-import com.follow.clash.common.AccessControlMode
-import com.follow.clash.service.models.AccessControlProps
-import com.follow.clash.service.models.NotificationParams
-import com.follow.clash.service.models.VpnOptions
+import com.cloudnote.sync.helper.common.AccessControlMode
+import com.cloudnote.sync.helper.service.models.AccessControlProps
+import com.cloudnote.sync.helper.service.models.NotificationParams
+import com.cloudnote.sync.helper.service.models.VpnOptions
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotSame

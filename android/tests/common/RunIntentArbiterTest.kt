@@ -1,4 +1,4 @@
-package com.follow.clash.common
+package com.cloudnote.sync.helper.common
 
 import java.util.concurrent.CyclicBarrier
 import java.util.concurrent.Executors

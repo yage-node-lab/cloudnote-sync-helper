@@ -1,11 +1,11 @@
-package com.follow.clash
+package com.cloudnote.sync.helper
 
-import com.follow.clash.common.AccessControlMode
-import com.follow.clash.models.SetupParams
-import com.follow.clash.models.SharedState
-import com.follow.clash.service.models.AccessControlProps
-import com.follow.clash.service.models.NotificationParams
-import com.follow.clash.service.models.VpnOptions
+import com.cloudnote.sync.helper.common.AccessControlMode
+import com.cloudnote.sync.helper.models.SetupParams
+import com.cloudnote.sync.helper.models.SharedState
+import com.cloudnote.sync.helper.service.models.AccessControlProps
+import com.cloudnote.sync.helper.service.models.NotificationParams
+import com.cloudnote.sync.helper.service.models.VpnOptions
 import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -102,7 +102,7 @@ private class FakeHost(override val scope: CoroutineScope) : ServiceStateHost {
     var lastStartOptions: VpnOptions? = null
 
     override var runtime: ServiceRuntime? = null
-    override val homeDirPath = "/data/user/0/com.follow.clash/files"
+    override val homeDirPath = "/data/user/0/com.cloudnote.sync.helper/files"
     override val sdkInt = 34
 
     val toasts = mutableListOf<String>()

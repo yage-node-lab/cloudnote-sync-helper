@@ -1,6 +1,6 @@
-package com.follow.clash.models
+package com.cloudnote.sync.helper.models
 
-import com.follow.clash.common.AccessControlMode
+import com.cloudnote.sync.helper.common.AccessControlMode
 import com.google.gson.Gson
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
